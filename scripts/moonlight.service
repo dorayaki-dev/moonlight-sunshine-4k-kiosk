@@ -1,0 +1,44 @@
+[Unit]
+Description=Moonlight kiosk on the TV output (HDMI)
+# 电视串流客户端：在独立 X 会话里全屏运行 Moonlight
+After=systemd-user-sessions.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# 用 xinit 起一个独立的 X 会话（vt2，因此本机的桌面/其它登录不受影响）
+ExecStart=/usr/bin/xinit /opt/moonlight-kiosk/moonlight-kiosk.sh -- :0 vt2 -keeptty -nolisten tcp
+
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/tmp/runtime-root
+Environment=QT_QPA_PLATFORM=xcb
+Environment=QT_QUICK_BACKEND=software
+Environment=LIBGL_ALWAYS_SOFTWARE=1
+Environment=SDL_AUDIODRIVER=alsa
+
+# 可选：把 HOST/APP/分辨率等放在这里
+EnvironmentFile=-/etc/default/moonlight-kiosk
+
+StandardInput=tty
+TTYPath=/dev/tty2
+TTYReset=yes
+TTYVHangup=yes
+
+# 不要用 systemctl restart —— 它的 stop 可能卡在 X 会话上：
+#   systemctl kill -s TERM moonlight; systemctl reset-failed moonlight; systemctl start moonlight
+Restart=no
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 重要：把服务端自签证书的可信路径显式钉进来（AppImage 自带 OpenSSL，未必读系统默认）
+# 写到 /etc/systemd/system/moonlight.service.d/ssl.conf ：
+#
+#   [Service]
+#   Environment=SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+#   Environment=SSL_CERT_DIR=/etc/ssl/certs
+#
+# 这是解决配对 401 "Server certificate mismatch" 的关键（见 references/01）
+# ─────────────────────────────────────────────────────────────────────────────
