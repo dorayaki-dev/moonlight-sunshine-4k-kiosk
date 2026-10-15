@@ -65,7 +65,7 @@
 
 ```bash
 # 通用（自动识别 Claude Code / Cursor / Codex / Hermes 等）
-npx skills add <OWNER>/moonlight-sunshine-4k-kiosk
+npx skills add Swagzhp/moonlight-sunshine-4k-kiosk
 
 # 或手动：把本目录拷进你 agent 的 skills 目录
 cp -R moonlight-sunshine-4k-kiosk ~/.claude/skills/
