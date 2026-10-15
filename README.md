@@ -8,6 +8,9 @@
 [![4K60](https://img.shields.io/badge/verified-4K60%20%2B%20audio-success)](#-实测数据--measured-results)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
+![架构图 / Architecture](assets/architecture.png)
+
+
 ---
 
 ## 为什么做这个 · Why this exists
@@ -19,6 +22,8 @@
 > **症状 → 真正原因 → 一行命令验证 → 修法**
 
 *Setting it up is the easy part. **Diagnosing it is where everyone gets stuck.** This skill carries the diagnosis, not the install guide.*
+
+![五个断点 / Five failure points](assets/failure-points.png)
 
 ### 症状对照表 · Symptom → Root cause → Fix
 

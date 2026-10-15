@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="660" viewBox="0 0 1240 660" font-family="JetBrains Mono, DejaVu Sans Mono, ui-monospace, monospace">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="660" fill="#020617"/>
+  <rect width="1240" height="660" fill="url(#grid)"/>
+
+  <!-- header -->
+  <circle cx="44" cy="40" r="4" fill="#34d399"/>
+  <text x="60" y="46" fill="#e2e8f0" font-size="21" font-weight="700">Moonlight &#8594; Sunshine 4K60 TV Kiosk</text>
+  <text x="60" y="70" fill="#64748b" font-size="11">把一台 Linux 机器变成电视上的全屏 4K60 串流客户端 · Linux box as a fullscreen 4K60 Moonlight client for your TV</text>
+
+  <!-- connection arrows (drawn early, behind boxes) -->
+  <line x1="366" y1="228" x2="552" y2="228" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="906" y1="228" x2="952" y2="228" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- HOST -->
+  <rect x="40" y="128" width="326" height="200" rx="6" fill="#0f172a"/>
+  <rect x="40" y="128" width="326" height="200" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="60" y="156" fill="#34d399" font-size="13" font-weight="700">HOST · 游戏 PC</text>
+  <text x="60" y="176" fill="#94a3b8" font-size="10">Windows / Linux</text>
+  <line x1="60" y1="190" x2="346" y2="190" stroke="#1e293b" stroke-width="1"/>
+  <text x="60" y="212" fill="#e2e8f0" font-size="11">Sunshine 主机端</text>
+  <text x="60" y="236" fill="#cbd5e1" font-size="10">· NVENC / AMF 硬件编码</text>
+  <text x="60" y="258" fill="#cbd5e1" font-size="10">· 虚拟声卡采集（VB-CABLE）</text>
+  <text x="60" y="280" fill="#cbd5e1" font-size="10">· 自签证书 + PIN 配对</text>
+  <text x="60" y="308" fill="#64748b" font-size="9">端口 47989 / 47984 / 47990</text>
+
+  <!-- LAN -->
+  <text x="459" y="204" fill="#fbbf24" font-size="10" text-anchor="middle">LAN · 有线千兆</text>
+  <text x="459" y="252" fill="#94a3b8" font-size="9" text-anchor="middle">HEVC 4K60 · 40~80 Mbps</text>
+  <text x="459" y="268" fill="#94a3b8" font-size="9" text-anchor="middle">延迟 1 ms · 丢帧 0.00%</text>
+
+  <!-- CLIENT -->
+  <rect x="556" y="108" width="348" height="240" rx="6" fill="#0f172a"/>
+  <rect x="556" y="108" width="348" height="240" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="576" y="136" fill="#22d3ee" font-size="13" font-weight="700">LINUX KIOSK · 客户端</text>
+  <text x="576" y="156" fill="#94a3b8" font-size="10">Debian 系 · HDMI 输出</text>
+  <line x1="576" y1="170" x2="884" y2="170" stroke="#1e293b" stroke-width="1"/>
+  <text x="576" y="192" fill="#e2e8f0" font-size="11">Moonlight（VAAPI 硬解）</text>
+  <text x="576" y="216" fill="#cbd5e1" font-size="10">· xinit 独立会话，全屏 kiosk</text>
+  <text x="576" y="238" fill="#cbd5e1" font-size="10">· 命令行直连 --4K --fps 60</text>
+  <text x="576" y="260" fill="#cbd5e1" font-size="10">· 断线 5 秒自动重连</text>
+  <text x="576" y="282" fill="#cbd5e1" font-size="10">· HDMI 音频（AUDIODEV + IEC958）</text>
+  <text x="576" y="304" fill="#cbd5e1" font-size="10">· 信任库装入主机自签证书</text>
+  <text x="576" y="330" fill="#64748b" font-size="9">systemd: moonlight.service</text>
+
+  <!-- TV -->
+  <rect x="956" y="148" width="248" height="160" rx="6" fill="#0f172a"/>
+  <rect x="956" y="148" width="248" height="160" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="976" y="176" fill="#e2e8f0" font-size="13" font-weight="700">TV · 电视</text>
+  <line x1="976" y1="190" x2="1184" y2="190" stroke="#1e293b" stroke-width="1"/>
+  <text x="976" y="212" fill="#cbd5e1" font-size="10">HDMI 2.0b 输出</text>
+  <text x="976" y="234" fill="#cbd5e1" font-size="10">「增强格式」已开启</text>
+  <text x="976" y="256" fill="#cbd5e1" font-size="10">3840&#215;2160 @ 60 Hz</text>
+  <text x="976" y="286" fill="#34d399" font-size="10">&#9679; 音视频均由 HDMI 承载</text>
+
+  <!-- bottom: three jobs -->
+  <text x="40" y="392" fill="#64748b" font-size="10">客户端只做三件事 / the client does three things</text>
+
+  <rect x="40" y="406" width="368" height="112" rx="6" fill="#0f172a"/>
+  <rect x="40" y="406" width="368" height="112" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="60" y="434" fill="#fb7185" font-size="12" font-weight="700">&#9312; 配对 · TLS 信任</text>
+  <text x="60" y="458" fill="#cbd5e1" font-size="10">把主机自签证书装进客户端信任库</text>
+  <text x="60" y="478" fill="#cbd5e1" font-size="10">不做这步 → 401 证书不匹配</text>
+  <text x="60" y="500" fill="#64748b" font-size="9">references/01</text>
+
+  <rect x="436" y="406" width="368" height="112" rx="6" fill="#0f172a"/>
+  <rect x="436" y="406" width="368" height="112" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="456" y="434" fill="#22d3ee" font-size="12" font-weight="700">&#9313; 请求 4K60 · CLI 直连</text>
+  <text x="456" y="458" fill="#cbd5e1" font-size="10">GUI 默认 1080p，且改配置会被覆盖</text>
+  <text x="456" y="478" fill="#cbd5e1" font-size="10">改命令行直连 + 先 /cancel 结束旧会话</text>
+  <text x="456" y="500" fill="#64748b" font-size="9">references/02</text>
+
+  <rect x="832" y="406" width="372" height="112" rx="6" fill="#0f172a"/>
+  <rect x="832" y="406" width="372" height="112" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="852" y="434" fill="#fbbf24" font-size="12" font-weight="700">&#9314; 输出 · HDMI 音视频</text>
+  <text x="852" y="458" fill="#cbd5e1" font-size="10">声卡序号会漂移，每次启动重新探测</text>
+  <text x="852" y="478" fill="#cbd5e1" font-size="10">IEC958 开关关着 → 数据在流、电视无声</text>
+  <text x="852" y="500" fill="#64748b" font-size="9">references/03</text>
+
+  <!-- footer -->
+  <line x1="40" y1="552" x2="1200" y2="552" stroke="#1e293b" stroke-width="1"/>
+  <text x="40" y="578" fill="#64748b" font-size="10">实测 / measured: 3840&#215;2160 60.49 FPS (HEVC) · 解码 43 ms · 网络延迟 1 ms · 丢帧 0.00% · 待机 9 W</text>
+  <text x="40" y="600" fill="#475569" font-size="10">github.com/dorayaki-dev/moonlight-sunshine-4k-kiosk</text>
+  <text x="40" y="624" fill="#334155" font-size="9">示意图（非真实截图）/ synthetic illustration — no real desktop content</text>
+</svg>

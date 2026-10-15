@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="700" viewBox="0 0 1240 700" font-family="JetBrains Mono, DejaVu Sans Mono, ui-monospace, monospace">
+  <defs>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="700" fill="#020617"/>
+  <rect width="1240" height="700" fill="url(#grid2)"/>
+
+  <!-- header -->
+  <circle cx="44" cy="38" r="4" fill="#fb7185"/>
+  <text x="60" y="44" fill="#e2e8f0" font-size="20" font-weight="700">串流链路上的五个断点 · Five failure points</text>
+  <text x="60" y="68" fill="#64748b" font-size="11">每一条的症状都指向别处 —— 先看真正的原因，再去查 / every symptom points somewhere else. Check the real cause first.</text>
+
+  <!-- stage headers + arrows -->
+  <line x1="248" y1="126" x2="272" y2="126" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#ar3)"/>
+  <line x1="486" y1="126" x2="510" y2="126" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#ar3)"/>
+  <line x1="724" y1="126" x2="748" y2="126" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#ar3)"/>
+  <line x1="962" y1="126" x2="986" y2="126" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#ar3)"/>
+
+  <!-- column 1 : pairing -->
+  <rect x="40" y="104" width="208" height="44" rx="6" fill="#0f172a"/>
+  <rect x="40" y="104" width="208" height="44" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="144" y="132" fill="#fb7185" font-size="12" font-weight="700" text-anchor="middle">&#9312; 配对 Pairing</text>
+  <rect x="40" y="164" width="208" height="316" rx="6" fill="#0f172a"/>
+  <rect x="40" y="164" width="208" height="316" rx="6" fill="rgba(15,23,42,0.9)" stroke="#334155" stroke-width="1.5"/>
+  <text x="56" y="192" fill="#fb7185" font-size="10" font-weight="700">症状</text>
+  <text x="56" y="210" fill="#e2e8f0" font-size="10">Server certificate</text>
+  <text x="56" y="226" fill="#e2e8f0" font-size="10">mismatch (401)</text>
+  <text x="56" y="258" fill="#64748b" font-size="10" font-weight="700">看起来像</text>
+  <text x="56" y="276" fill="#94a3b8" font-size="9">配对状态坏了 /</text>
+  <text x="56" y="290" fill="#94a3b8" font-size="9">客户端身份脏了</text>
+  <text x="56" y="322" fill="#34d399" font-size="10" font-weight="700">真正原因</text>
+  <text x="56" y="340" fill="#cbd5e1" font-size="9">客户端不信任主机的</text>
+  <text x="56" y="354" fill="#cbd5e1" font-size="9">自签证书 → 掐断握手</text>
+  <text x="56" y="386" fill="#fbbf24" font-size="10" font-weight="700">修法</text>
+  <text x="56" y="404" fill="#cbd5e1" font-size="9">证书装进客户端</text>
+  <text x="56" y="418" fill="#cbd5e1" font-size="9">信任库</text>
+  <text x="56" y="456" fill="#475569" font-size="9">references/01</text>
+
+  <!-- column 2 : negotiation -->
+  <rect x="278" y="104" width="208" height="44" rx="6" fill="#0f172a"/>
+  <rect x="278" y="104" width="208" height="44" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="382" y="132" fill="#22d3ee" font-size="12" font-weight="700" text-anchor="middle">&#9313; 协商规格</text>
+  <rect x="278" y="164" width="208" height="316" rx="6" fill="#0f172a"/>
+  <rect x="278" y="164" width="208" height="316" rx="6" fill="rgba(15,23,42,0.9)" stroke="#334155" stroke-width="1.5"/>
+  <text x="294" y="192" fill="#fb7185" font-size="10" font-weight="700">症状</text>
+  <text x="294" y="210" fill="#e2e8f0" font-size="10">4K 电视上画面</text>
+  <text x="294" y="226" fill="#e2e8f0" font-size="10">发糊，只有 1080p</text>
+  <text x="294" y="258" fill="#64748b" font-size="10" font-weight="700">看起来像</text>
+  <text x="294" y="276" fill="#94a3b8" font-size="9">电视 / 线材不支持</text>
+  <text x="294" y="290" fill="#94a3b8" font-size="9">或主机显卡不够</text>
+  <text x="294" y="322" fill="#34d399" font-size="10" font-weight="700">真正原因</text>
+  <text x="294" y="340" fill="#cbd5e1" font-size="9">GUI 默认请求 1080p；</text>
+  <text x="294" y="354" fill="#cbd5e1" font-size="9">resume 沿用旧规格</text>
+  <text x="294" y="386" fill="#fbbf24" font-size="10" font-weight="700">修法</text>
+  <text x="294" y="404" fill="#cbd5e1" font-size="9">CLI 直连 --4K --fps 60</text>
+  <text x="294" y="418" fill="#cbd5e1" font-size="9">+ /cancel 结束旧会话</text>
+  <text x="294" y="456" fill="#475569" font-size="9">references/02</text>
+
+  <!-- column 3 : transport -->
+  <rect x="516" y="104" width="208" height="44" rx="6" fill="#0f172a"/>
+  <rect x="516" y="104" width="208" height="44" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="620" y="132" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">&#9314; 传输 Transport</text>
+  <rect x="516" y="164" width="208" height="316" rx="6" fill="#0f172a"/>
+  <rect x="516" y="164" width="208" height="316" rx="6" fill="rgba(15,23,42,0.9)" stroke="#334155" stroke-width="1.5"/>
+  <text x="532" y="192" fill="#fb7185" font-size="10" font-weight="700">症状</text>
+  <text x="532" y="210" fill="#e2e8f0" font-size="10">掉帧、卡顿、</text>
+  <text x="532" y="226" fill="#e2e8f0" font-size="10">网络丢包 &gt; 0%</text>
+  <text x="532" y="258" fill="#64748b" font-size="10" font-weight="700">看起来像</text>
+  <text x="532" y="276" fill="#94a3b8" font-size="9">客户端性能不够，</text>
+  <text x="532" y="290" fill="#94a3b8" font-size="9">解码跟不上</text>
+  <text x="532" y="322" fill="#34d399" font-size="10" font-weight="700">真正原因</text>
+  <text x="532" y="340" fill="#cbd5e1" font-size="9">码率超过链路带宽</text>
+  <text x="532" y="354" fill="#cbd5e1" font-size="9">（Wi-Fi / 百兆）</text>
+  <text x="532" y="386" fill="#fbbf24" font-size="10" font-weight="700">修法</text>
+  <text x="532" y="404" fill="#cbd5e1" font-size="9">改有线千兆；</text>
+  <text x="532" y="418" fill="#cbd5e1" font-size="9">4K60 用 40~80 Mbps</text>
+  <text x="532" y="456" fill="#475569" font-size="9">references/02</text>
+
+  <!-- column 4 : decode -->
+  <rect x="754" y="104" width="208" height="44" rx="6" fill="#0f172a"/>
+  <rect x="754" y="104" width="208" height="44" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="858" y="132" fill="#a78bfa" font-size="12" font-weight="700" text-anchor="middle">&#9315; 解码 Decode</text>
+  <rect x="754" y="164" width="208" height="316" rx="6" fill="#0f172a"/>
+  <rect x="754" y="164" width="208" height="316" rx="6" fill="rgba(15,23,42,0.9)" stroke="#334155" stroke-width="1.5"/>
+  <text x="770" y="192" fill="#fb7185" font-size="10" font-weight="700">症状</text>
+  <text x="770" y="210" fill="#e2e8f0" font-size="10">操作延迟高、</text>
+  <text x="770" y="226" fill="#e2e8f0" font-size="10">待机功耗莫名升高</text>
+  <text x="770" y="258" fill="#64748b" font-size="10" font-weight="700">看起来像</text>
+  <text x="770" y="276" fill="#94a3b8" font-size="9">客户端太弱 /</text>
+  <text x="770" y="290" fill="#94a3b8" font-size="9">服务端编码慢</text>
+  <text x="770" y="322" fill="#34d399" font-size="10" font-weight="700">真正原因</text>
+  <text x="770" y="340" fill="#cbd5e1" font-size="9">硬解未生效 / iGPU</text>
+  <text x="770" y="354" fill="#cbd5e1" font-size="9">档位停在 performance</text>
+  <text x="770" y="386" fill="#fbbf24" font-size="10" font-weight="700">修法</text>
+  <text x="770" y="404" fill="#cbd5e1" font-size="9">启用 VAAPI；省电态</text>
+  <text x="770" y="418" fill="#cbd5e1" font-size="9">回收 power_dpm_state</text>
+  <text x="770" y="456" fill="#475569" font-size="9">references/05</text>
+
+  <!-- column 5 : output -->
+  <rect x="992" y="104" width="208" height="44" rx="6" fill="#0f172a"/>
+  <rect x="992" y="104" width="208" height="44" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1096" y="132" fill="#34d399" font-size="12" font-weight="700" text-anchor="middle">&#9316; 输出 Output</text>
+  <rect x="992" y="164" width="208" height="316" rx="6" fill="#0f172a"/>
+  <rect x="992" y="164" width="208" height="316" rx="6" fill="rgba(15,23,42,0.9)" stroke="#334155" stroke-width="1.5"/>
+  <text x="1008" y="192" fill="#fb7185" font-size="10" font-weight="700">症状</text>
+  <text x="1008" y="210" fill="#e2e8f0" font-size="10">有音频数据在流，</text>
+  <text x="1008" y="226" fill="#e2e8f0" font-size="10">但电视完全没声音</text>
+  <text x="1008" y="258" fill="#64748b" font-size="10" font-weight="700">看起来像</text>
+  <text x="1008" y="276" fill="#94a3b8" font-size="9">主机没采到音频 /</text>
+  <text x="1008" y="290" fill="#94a3b8" font-size="9">虚拟声卡没配好</text>
+  <text x="1008" y="322" fill="#34d399" font-size="10" font-weight="700">真正原因</text>
+  <text x="1008" y="340" fill="#cbd5e1" font-size="9">HDMI 的 IEC958</text>
+  <text x="1008" y="354" fill="#cbd5e1" font-size="9">输出开关是 [off]</text>
+  <text x="1008" y="386" fill="#fbbf24" font-size="10" font-weight="700">修法</text>
+  <text x="1008" y="404" fill="#cbd5e1" font-size="9">sset IEC958 on，</text>
+  <text x="1008" y="418" fill="#cbd5e1" font-size="9">每次启动都重设</text>
+  <text x="1008" y="456" fill="#475569" font-size="9">references/03</text>
+
+  <!-- footer -->
+  <line x1="40" y1="516" x2="1200" y2="516" stroke="#1e293b" stroke-width="1"/>
+  <text x="40" y="546" fill="#e2e8f0" font-size="11" font-weight="700">定位顺序：从最容易被误判的地方开始排除</text>
+  <text x="40" y="568" fill="#64748b" font-size="10">完整的「症状 → 第一件该验的事」决策树：references/troubleshooting-decision-tree.md</text>
+  <text x="40" y="596" fill="#475569" font-size="10">先分诊再动手：看客户端日志里有没有 "Received first audio packet"、请求是 launch 还是 resume</text>
+  <text x="40" y="628" fill="#334155" font-size="10">github.com/dorayaki-dev/moonlight-sunshine-4k-kiosk</text>
+  <text x="40" y="656" fill="#334155" font-size="9">示意图（非真实截图）/ synthetic illustration — no real environment data</text>
+</svg>
